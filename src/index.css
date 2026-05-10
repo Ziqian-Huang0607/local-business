@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #0E0E0E;
+    --color-bg-alt: #141210;
+    --color-bg-elevated: #1A1816;
+    --color-bg-hero: #080706;
+    --color-text: #FAF8F5;
+    --color-text-secondary: #B8B2A8;
+    --color-text-dim: #6B6560;
+    --color-accent: #D4853F;
+    --color-accent-hover: #E89A4E;
+    --color-accent-dim: rgba(212, 133, 63, 0.19);
+    --color-gold: #C8A45C;
+    --color-gold-dim: rgba(200, 164, 92, 0.25);
+    --color-border: #2A2725;
+    --color-ember: #FF8C3A;
+    --color-ember-glow: #FF6B1A;
+
+    --background: 0 0% 5.5%;
+    --foreground: 30 20% 98%;
+    --card: 20 8% 10%;
+    --card-foreground: 30 20% 98%;
+    --popover: 0 0% 5.5%;
+    --popover-foreground: 30 20% 98%;
+    --primary: 28 60% 53%;
+    --primary-foreground: 0 0% 5.5%;
+    --secondary: 20 8% 10%;
+    --secondary-foreground: 30 20% 98%;
+    --muted: 20 5% 15%;
+    --muted-foreground: 25 6% 52%;
+    --accent: 28 60% 53%;
+    --accent-foreground: 0 0% 5.5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 7% 16%;
+    --input: 20 7% 16%;
+    --ring: 28 60% 53%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    word-break: keep-all;
+  }
+
+  ::selection {
+    background-color: rgba(212, 133, 63, 0.35);
+    color: var(--color-text);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .text-display-xl {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+
+  .text-display-lg {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .text-h3 {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  .text-caption {
+    font-size: 0.8125rem;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
+  .text-label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, #2A2725 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+}
